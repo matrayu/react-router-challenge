@@ -1,11 +1,15 @@
 import React from 'react';
 import AboutMenu from './about-menu';
+import { Route, Link } from 'react-router-dom';
 
 export default function App(props) {
     return (
         <div className="app">
-            {/* This should only show up on /about/foo, /about/bar, or /about/foo/bar */}
-            <AboutMenu />
+            <Link
+                to={'/about'}
+            >
+                <AboutMenu />
+            </Link>
         </div>
     );
 }
